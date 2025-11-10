@@ -1,0 +1,62 @@
+{
+  "name": "everest-app",
+  "version": "0.1.0",
+  "description": "An AI app that's ACTUALLY useful.",
+  "license": "ISC",
+  "author": "pugsedo",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^39.1.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "electron-updater": "^6.6.2",
+    "node-fetch": "^3.3.2"
+  },
+  "build": {
+    "appId": "com.madebymikhail.everest",
+    "productName": "Everest",
+    "publish": {
+      "provider": "github",
+      "owner": "madebymikhail",
+      "repo": "everest"
+    },
+    "files": [
+      "src/main.js",
+      "src/preload.js",
+      "src/static/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/",
+        "to": "resources"
+      },
+      {
+        "from": "assets/",
+        "to": "assets"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon_full.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon_full.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "assets/icon_full.png"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cloney</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body onload="document.getElementById('prompt').focus()">
+    <div class="app">
+      <textarea id="prompt" placeholder="Ask or paste text..."></textarea>
+      <div class="buttons">
+        <div class="buttons-left">
+          <select id="modelSelect" class="icon-button">
+            <option disabled selected>Loading models...</option>
+          </select>
+        </div>
+        
+        <div class="buttons-left">
+          <button id="type" class="icon-button">Type</button>
+          <button id="send" class="icon-button">Send</button>
+        </div>
+      </div>
+
+      <!-- Countdown overlay -->
+      <div id="countdown-overlay" class="hidden">
+        <div id="countdown-number">3</div>
+      </div>
+    </div>
+
+    <script type="module" src="scripts/index.js"></script>
+  </body>
+</html>

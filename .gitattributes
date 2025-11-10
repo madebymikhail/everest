@@ -1,0 +1,14 @@
+# Treat backend binaries as binary files
+everest-app/resources/EverestService.exe  binary
+everest-app/resources/EverestService_mac binary
+everest-app/resources/EverestService_linux binary
+
+# Prevent line ending conversion for Python scripts (optional)
+*.py text eol=lf
+
+# Prevent line ending conversion for JS / TS scripts
+*.js text eol=lf
+*.ts text eol=lf
+
+# Everything else, default handling
+* text=auto

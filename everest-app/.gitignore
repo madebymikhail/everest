@@ -1,0 +1,23 @@
+# Node / Electron
+node_modules/
+dist/
+build/
+out/
+*.log
+.DS_Store
+
+# Compiled backend binaries
+resources/EverestService.exe
+resources/EverestService_mac
+resources/EverestService_linux
+
+# Generated packaging / installers
+*.app/
+*.exe
+*.dmg
+*.deb
+*.rpm
+
+# Electron builder temp files
+electron-builder.yml
+release/

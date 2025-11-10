@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.app {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(25, 25, 25, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    resize: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.12) transparent;
+}
+
+textarea::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+textarea::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.12);
+    border-radius: 6px;
+}
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+textarea:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+select {
+    appearance: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.icon-button {
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 6px 12px;
+    transition: background 0.2s;
+}
+
+.icon-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.icon-button:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.icon-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#countdown-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 72px;
+    font-weight: bold;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none; /* ✅ prevents blocking input */
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
+}
+  
+#countdown-overlay.active {
+    opacity: 1;
+    pointer-events: all; /* ✅ only block while visible */
+}
+  
+.hidden {
+    display: none;
+}
+  
