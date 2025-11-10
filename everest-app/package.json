@@ -49,7 +49,10 @@
     },
     "mac": {
       "target": "dmg",
-      "icon": "assets/icon_full.icns"
+      "icon": "assets/icon_full.icns",
+      "extendInfo": {
+        "LSUIElement": true
+      }
     },
     "linux": {
       "target": [
